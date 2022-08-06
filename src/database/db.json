@@ -1,0 +1,25 @@
+{
+  "foo": [
+    {
+      "name": "Marta",
+      "email": "marta@fake.com",
+      "phone": "8293849237492",
+      "id": "15189c8d-e1e3-4a12-8f9b-59eecc8c4d85",
+      "createdAt": "6/8/2022 11:40:48"
+    },
+    {
+      "name": "Esteban",
+      "email": "esteban@fake.com",
+      "phone": "239498234972",
+      "id": "bad43153-21f5-4c11-a2d8-dc7c63a4a46e",
+      "createdAt": "6/8/2022 11:41:09"
+    },
+    {
+      "name": "Miguel",
+      "email": "miguel@fake.com",
+      "phone": "274937492749",
+      "id": "16c2722a-4cc6-4564-804b-05246a5d7787",
+      "createdAt": "6/8/2022 11:41:29"
+    }
+  ]
+}
