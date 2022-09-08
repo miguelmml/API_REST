@@ -6,8 +6,12 @@ const getAllFoo = (req, res) => {
 }
 
 const getOneFoo = (req, res) => {
-  const oneFoo = fooService.getOneFoo(req.params.id)
-  res.send(`Get One: ${req.params.id}`)
+  const { params: { fooId }} = req
+
+  if(!fooId) return 
+
+  const oneFoo = fooService.getOneFoo(fooId)
+  res.send({ status: 'OK', data: oneFoo })
 }
 
 const createNewFoo = (req, res) => {
@@ -28,13 +32,21 @@ const createNewFoo = (req, res) => {
 }
 
 const updateOneFoo = (req, res) => {
-  const updatedFoo = fooService.updateOneFoo(req.params.id)
-  res.send(`Update: ${req.params.id}`)
+  const { body, params: { fooId }} = req
+
+  if(!fooId) return 
+
+  const updatedFoo = fooService.updateOneFoo(fooId, body)
+  res.send({status: 'OK', data: updatedFoo})
 }
 
 const deleteOneFoo = (req, res) => {
-  fooService.deleteOneFoo(req.params.id)
-  res.send(`Delete: ${req.params.id}`)
+  const { params: { fooId }} = req
+
+  if(!fooId) return 
+
+  fooService.deleteOneFoo(fooId)
+  res.status(204).send({ status: "OK" })
 }
 
 module.exports = {

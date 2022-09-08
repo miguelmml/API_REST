@@ -1,25 +1,18 @@
 {
   "foo": [
     {
-      "name": "Marta",
-      "email": "marta@fake.com",
-      "phone": "8293849237492",
-      "id": "15189c8d-e1e3-4a12-8f9b-59eecc8c4d85",
-      "createdAt": "6/8/2022 11:40:48"
+      "name": "Belen",
+      "email": "bmonk@foo.com",
+      "phone": "12341234",
+      "id": "f3a561c1-a1ef-4ca6-a302-317c730af4ad",
+      "createdAt": "7/9/2022, 19:33:51"
     },
     {
-      "name": "Esteban",
-      "email": "esteban@fake.com",
-      "phone": "239498234972",
-      "id": "bad43153-21f5-4c11-a2d8-dc7c63a4a46e",
-      "createdAt": "6/8/2022 11:41:09"
-    },
-    {
-      "name": "Miguel",
-      "email": "miguel@fake.com",
-      "phone": "274937492749",
-      "id": "16c2722a-4cc6-4564-804b-05246a5d7787",
-      "createdAt": "6/8/2022 11:41:29"
+      "name": "Zacaida",
+      "email": "za@za.com",
+      "phone": "1010101010",
+      "id": "5d7655ec-73ea-4ff3-b874-343842b7176c",
+      "createdAt": "8/9/2022, 15:56:53"
     }
   ]
 }

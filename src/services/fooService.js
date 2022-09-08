@@ -6,8 +6,9 @@ const getAllFoo = () => {
   return allFoo 
 } 
 
-const getOneFoo = () => {
-  return
+const getOneFoo = (id) => {
+  const foo = Foo.getOneFoo(id)
+  return foo
 }
 
 const createNewFoo = (newFoo) => {
@@ -20,12 +21,13 @@ const createNewFoo = (newFoo) => {
   return Foo.createNewFoo(fooToInsert)
 } 
 
-const updateOneFoo = () => {
-  return
+const updateOneFoo = (fooId, changes) => {
+  const updatedFoo =  Foo.updateOneFoo(fooId, changes)
+  return updatedFoo
 }
 
-const deleteOneFoo = () => {
-  return
+const deleteOneFoo = (fooId) => {
+  Foo.deleteFoo(fooId)
 }
 
 module.exports = {
