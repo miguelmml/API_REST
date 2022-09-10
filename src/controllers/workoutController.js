@@ -8,10 +8,20 @@ const getAllWorkouts = (req, res) => {
 const getOneWorkout = (req, res) => {
   const { params: { workoutId }} = req
 
-  if(!workoutId) return 
+  if(!workoutId){
+    res
+      .status(400)
+      .send({ status: 'FAILED', data: { error: "Parameter ':workoutId' can not be empty." }})
+  }
 
-  const oneWorkout = workoutService.getOneWorkout(workoutId)
-  res.send({ status: 'OK', data: oneWorkout })
+  try {
+    const oneWorkout = workoutService.getOneWorkout(workoutId)
+    res.send({ status: 'OK', data: oneWorkout })
+  } catch(error) {
+    res
+    .status(error?.status || 500)
+    .send({ status: 'FAILED', data: { error: error?.message || error }})
+  }
 }
 
 const createNewWorkout = (req, res) => {
