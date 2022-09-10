@@ -1,11 +1,11 @@
 const express = require('express')
 const app = express()
-const v1FooRouter = require('./v1/routes/fooRoutes')
+const v1WorkoutRouter = require('./v1/routes/workoutRoutes')
 
 const PORT = process.env.PORT || 3000
 
 app.use(express.json())
-app.use('/api/v1/foo', v1FooRouter)
+app.use('/api/v1/workout', v1WorkoutRouter)
 
 
 app.listen(PORT, () => {
