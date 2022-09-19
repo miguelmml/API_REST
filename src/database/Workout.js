@@ -1,8 +1,16 @@
 const DB = require('./db.json')
 const { saveToDatabase } = require('./utils')
 
-const getAllWorkout = () => {
-  return DB.workouts
+const getAllWorkout = (filterParams) => {
+
+  let workouts = DB.workouts
+
+  if(filterParams.mode){
+    return workouts.filter((workout) => {
+      return workout.mode.toLowerCase().includes(filterParams.mode)
+    })
+  }
+  return workouts
 }
 
 const getOneWorkout = (id) => {
